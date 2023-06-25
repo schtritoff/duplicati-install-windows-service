@@ -12,7 +12,7 @@ mkdir "C:\ProgramData\Duplicati\logs"
 
 :: run installer - msi exit codes https://learn.microsoft.com/en-us/windows/win32/msi/error-codes
 if not exist "C:\Program Files\Duplicati 2\Duplicati.WindowsService.exe" (
-  msiexec /i "%~dp0duplicati-2.0.6.104_canary_2022-06-15-x64.msi" /l*v "C:\ProgramData\Duplicati\logs\installer.log" /passive /norestart TRANSFORMS="%~dp0duplicati-noshortcuts.mst" FORSERVICE=1
+  msiexec /i "%~dp0duplicati-2.0.7.2_canary_2023-05-25-x64.msi" /l*v "C:\ProgramData\Duplicati\logs\installer.log" /passive /norestart TRANSFORMS="%~dp0duplicati-noshortcuts.mst" FORSERVICE=1
   IF NOT !errorlevel! EQU 0 IF NOT !errorlevel! EQU 1641 IF NOT !errorlevel! EQU 3010 (EXIT /B !errorlevel!)
 )
 
